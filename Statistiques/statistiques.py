@@ -13,7 +13,7 @@ if __name__=='__main__':
     parser.add_argument('inexo')
     args=parser.parse_args()
     exo = args.inexo
-    exos = ['C1', 'C2', 'C3', 'C4', 'C5', 'C6', ]
+    exos = data.keys()
     if not exo in exos :
         print("ERROR 101: \'%s\' n'est pas un exercice!" % exo)
         sys.exit(101)
@@ -30,7 +30,7 @@ if __name__=='__main__':
             print('      ->', trans, ' : ', valeur)
 
     print()
-    objets_etat = int (input('Combien d\'objets par Etats? '))
+    objets_etat = int (input('Combien d\'objets par états? '))
 
     for cle, etat in etats.items():
         etat['nb_objets'] = objets_etat
@@ -56,12 +56,12 @@ if __name__=='__main__':
                         futur[trans] += 1
                     elif(randval == 100):
                         futur[trans] += 1
-                        randval = -1
+                        randval = -1    
                     probacum += valeur*100
         for cle, nbfutur in futur.items():
             etats['etat_'+cle]['nb_objets'] = nbfutur
         history.append(futur)
-    
+        
     somme = {}
 
     for i in range(len(history)):
