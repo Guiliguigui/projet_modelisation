@@ -454,4 +454,109 @@ data = {
             },
         },
     },
+    'A7' : {
+        'nombre_etats' : 3 ,
+        'nombre_transition' : 5 ,
+        'nombre_objets_total' : 1 ,
+        'etats' :{
+            'etat_A' : {
+                'nom_complet' : 'Possédé par Aldo' ,
+                'nb_objets' : 5 ,
+                'transitions' : {
+                    'P' : 0.5,
+                    'J' : 0.5,
+                },
+            },
+            'etat_J' : {
+                'nom_complet' : 'Joué' ,
+                'nb_objets' : 0 ,
+                'transitions' : {
+                    'A' : (18/37),
+                    'P' : (19/37),
+                },
+            }, 
+            'etat_P' : {
+                'nom_complet' : 'Perdu' ,
+                'nb_objets' : 0 ,
+                'transitions' : {
+                    'P' : 1,
+                },
+            }, 
+        },
+    },
+    'A8' : {
+        'nombre_etats' : 5 ,
+        'nombre_transition' : 8 ,
+        'nombre_objets_total' : 3 ,
+        'etats' :{
+            'etat_P' : {
+                'nom_complet' : 'Premier CowBoy' ,
+                'nb_objets' : 1 ,
+                'transitions' : {
+                    'T' : 0.75,
+                    'R' : 0.25,
+                },
+            },
+            'etat_S' : {
+                'nom_complet' : 'Second  CowBoy' ,
+                'nb_objets' : 1 ,
+                'transitions' : {
+                    'T' : 0.5,
+                    'R' : 0.5,
+                },
+            }, 
+            'etat_D' : {
+                'nom_complet' : 'Dernier  CowBoy' ,
+                'nb_objets' : 1 ,
+                'transitions' : {
+                    'T' : 0.25,
+                    'R' : 0.75,
+                },
+            },
+            'etat_R' : {
+                'nom_complet' : 'Raté' ,
+                'nb_objets' : 0 ,
+                'transitions' : {
+                    'R' : 1,
+                },
+            },
+            'etat_T' : {
+                'nom_complet' : 'Tué' ,
+                'nb_objets' : 0 ,
+                'transitions' : {
+                    'T' : 1,
+                },
+            },
+        },
+    },
+    'A9' : {
+        'nombre_etats' : 3 ,
+        'nombre_transition' : 4 ,
+        'nombre_objets_total' : 4 ,
+        'etats' :{
+            'etat_E' : {
+                'nom_complet' : 'Echange an attente' ,
+                'nb_objets' : 4 ,
+                'transitions' : {
+                    'P' : 0.55,
+                    'S' : 0.45,
+                },
+            },
+            'etat_P' : {
+                'nom_complet' : 'Premier tennisman' ,
+                'nb_objets' : 0 ,
+                'transitions' : {
+                    'P' : 1,
+                },
+            }, 
+            'etat_S' : {
+                'nom_complet' : 'Second tennisman' ,
+                'nb_objets' : 0 ,
+                'transitions' : {
+                    'S' : 1,
+                },
+            }, 
+        },
+    },
+
 }
