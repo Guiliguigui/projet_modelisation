@@ -58,6 +58,7 @@ if __name__=='__main__':
                         futur[trans] += 1
                         randval = -1    
                     probacum += valeur*100
+            etat['nb_objets'] = 0
         for cle, nbfutur in futur.items():
             etats['etat_'+cle]['nb_objets'] = nbfutur
         history.append(futur)
